@@ -1,5 +1,18 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<h3>{{ firstName }}</h3>
+<h3>{{ lastName }}</h3>
+
+{{#if booleanVar}}
+    <p>Helper if (context: block) | true</p>
+    {{else}}
+    <p>Helper if (context: block) | false</p>
+{{/if}}
+
+<ul>
+    {{#each testMas as |person index|}}
+        <li>{{ person.name }}, index: {{ index }}</li>
+    {{/each}}
+</ul>
+
+<span>Check</span>
 
 {{outlet}}
